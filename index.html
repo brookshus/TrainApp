@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title> Train Schedule</title>
  <!--- <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>--> 
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
@@ -36,27 +33,22 @@
             <th scope="col">Min Away</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-          </tr>
+        <!-- added an id to make attaching trains from db simpler -->
+        <tbody id="trains-here">
+          
         </tbody>
       </table>
     </div>
   </div>
 <br>
 <br>
-
   <div class="card">
     <div class="card-header">
       Add a Train
     </div>
     <div class="card-body">
-      <form>
+      <!-- added id for easy targeting on submit -->
+      <form id="train-form">
         <div class="form-group">
           <label for="InputTrainName">Train Name</label>
           <input type="name" class="form-control" id="InputTrainName" placeholder="Enter train name">
@@ -73,17 +65,13 @@
             <label for="InputTrainFrequency">Train Frequency (min)</label>
             <input type="frequency" class="form-control" id="InputTrainFrequency" placeholder="Enter train frequency">
           </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
 </div>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
-
-
 </body>
 </html>
